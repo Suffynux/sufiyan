@@ -753,7 +753,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <DiscordInvite inviteLink="https://discord.gg/aFvUxKejw4" />
+          <DiscordInvite inviteLink="https://discord.gg/9ZQPctbScC" />
         </div>
       </section>
 

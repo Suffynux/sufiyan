@@ -56,7 +56,7 @@ export default function DiscordInvite({ inviteLink }: DiscordInviteProps) {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white mb-1">Ø | NullStudio</h3>
+                <h3 className="text-xl font-bold text-white mb-1">Suffynux</h3>
                 <div className="flex items-center text-white/60 text-sm">
                   <div className="flex items-center mr-4">
                     <div className="w-2 h-2 rounded-full bg-green-500 mr-1"></div>
