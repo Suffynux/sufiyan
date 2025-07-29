@@ -12,7 +12,7 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: "Suffynux | Fullstack Web Developer",
-  description: "Portfolio of Kyros, a Discord bot developer specializing in AI chatbots and server tracking tools.",
+  description: "A Full stack developer ",
     generator: 'v0.dev'
 }
 
