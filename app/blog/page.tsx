@@ -335,10 +335,10 @@ export default function BlogPage() {
       <footer className="relative z-10 py-8 px-4 border-t border-white/10 mt-20">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <GlitchText text="KYROS" className="text-2xl font-bold" glitchIntensity={0.1} />
+            <GlitchText text="Suffynux" className="text-2xl font-bold" glitchIntensity={0.1} />
           </div>
           <div className="text-white/50 text-sm font-mono">
-            © {new Date().getFullYear()} // DESIGNED & DEVELOPED BY KYROS
+            © {new Date().getFullYear()} // DESIGNED & DEVELOPED BY SUFFYNUX
           </div>
         </div>
       </footer>

@@ -19,7 +19,7 @@ export default function JourneyPage() {
 
   const journeyData = [
     {
-      year: 15,
+      year: 20,
       title: "The Inspiration",
       description:
         "Inspired by the anime Sword Art Online, I became fascinated with the idea of creating virtual worlds. Despite not having a PC, I began researching and learning about programming concepts.",
@@ -55,7 +55,7 @@ export default function JourneyPage() {
       skills: ["C#", "Unity", "API Integration", "Bot Development", "Game Design"],
     },
     {
-      year: 19,
+      year: 20,
       title: "Advanced Discord & Web Dev",
       description:
         "Built a comprehensive Discord bot with moderation features and a 'One-tap' bot that created temporary voice channels. Started exploring React for web development.",
@@ -73,7 +73,7 @@ export default function JourneyPage() {
       skills: ["Advanced React", "Game Physics", "API Development", "State Management", "3D Modeling"],
     },
     {
-      year: 21,
+      year: 20,
       title: "Continuous Learning",
       description:
         "Despite being busy with work, I maintained a commitment to continuous learning, exploring new technologies and keeping up with industry trends.",
@@ -82,7 +82,7 @@ export default function JourneyPage() {
       skills: ["Self-directed Learning", "Industry Research", "Code Reviews", "Documentation"],
     },
     {
-      year: 22,
+      year: 20,
       title: "Full Stack Mastery",
       description:
         "Achieved proficiency as a Full Stack Developer and Discord bot developer. Created my own Discord server focused on development, idea sharing, and collaborative learning.",
@@ -327,10 +327,10 @@ export default function JourneyPage() {
       <footer className="relative z-10 py-8 px-4 border-t border-white/10 mt-20">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <GlitchText text="KYROS" className="text-2xl font-bold" glitchIntensity={0.1} />
+            <GlitchText text="Suffynux" className="text-2xl font-bold" glitchIntensity={0.1} />
           </div>
           <div className="text-white/50 text-sm font-mono">
-            © {new Date().getFullYear()} // DESIGNED & DEVELOPED BY KYROS
+            © {new Date().getFullYear()} // DESIGNED & DEVELOPED BY SUFFYNUX
           </div>
         </div>
       </footer>
