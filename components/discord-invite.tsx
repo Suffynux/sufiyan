@@ -56,15 +56,15 @@ export default function DiscordInvite({ inviteLink }: DiscordInviteProps) {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white mb-1">Suffynux</h3>
+                <h3 className="text-xl font-bold text-white mb-1">Sentinelz</h3>
                 <div className="flex items-center text-white/60 text-sm">
                   <div className="flex items-center mr-4">
                     <div className="w-2 h-2 rounded-full bg-green-500 mr-1"></div>
-                    <span>20 Online</span>
+                    <span>560 Online</span>
                   </div>
                   <div className="flex items-center">
                     <Users className="h-3 w-3 mr-1" />
-                    <span>143 Members</span>
+                    <span>1143 Members</span>
                   </div>
                 </div>
               </div>
@@ -88,7 +88,7 @@ export default function DiscordInvite({ inviteLink }: DiscordInviteProps) {
           {/* Join button */}
           <div className="p-4 border-t border-[#1E2124]">
             <a
-              href={inviteLink}
+              href={"https://discord.com/invite/gPYsEwZCWp"}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-full bg-[#5865F2] hover:bg-[#4752C4] text-white font-bold py-3 px-4 rounded transition duration-200"
