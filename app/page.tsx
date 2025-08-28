@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { motion, useTransform, useMotionValue } from "framer-motion"
-import { Terminal, MessageSquare, Server, ExternalLink, BookOpen, Gift } from "lucide-react"
+import { Terminal, MessageSquare, Server, ExternalLink, BookOpen, Gift, Video, Palette } from "lucide-react"
 import dynamic from "next/dynamic"
 import GlitchText from "@/components/glitch-text"
 import CyberButton from "@/components/cyber-button"
@@ -148,38 +148,37 @@ export default function Home() {
   // Experience timeline data
   const experienceData = [
     {
+      year: "2025",
+      title: "MERN Stack Developer at Epoch Solutions",
+      description: "Building and maintaining web applications using React.js and Next.js. Collaborating on MERN stack projects to deliver scalable solutions.",
+    },
+    {
+      year: "2024",
+      title: "MERN Stack Developer at Vizz Web Solutions Pvt. Ltd",
+      description: "Developed secure RESTful APIs with Node.js and Express.js. Managed project code and documentation on GitHub for team collaboration.",
+    },
+    {
       year: "2023",
-      title: "Lead Bot Developer at TechCord",
-      description: "Developed and maintained a suite of Discord bots serving over 500,000 users across 1,000+ servers.",
+      title: "Frontend Developer at Emirates TechHub",
+      description: "Built a modern responsive real estate platform with React.js featuring property listings and interactive UI. Implemented pixel-perfect Figma-to-code conversion using Tailwind CSS.",
     },
     {
       year: "2022",
-      title: "AI Integration Specialist",
-      description:
-        "Implemented advanced AI capabilities into existing bot infrastructure, increasing user engagement by 40%.",
-    },
-    {
-      year: "2021",
-      title: "Full Stack Developer",
-      description: "Built web dashboards and management tools for Discord bot configuration and analytics.",
-    },
-    {
-      year: "2020",
-      title: "Discord Bot Developer",
-      description: "Started creating custom Discord bots for gaming communities and educational servers.",
+      title: "Inventory Associate at Outfitters Stores",
+      description: "Managed inventory levels, conducted stock audits, and analyzed inventory data using Excel to optimize turnover rates.",
     },
   ]
 
   // Skills data for the radar chart
   const skillsData = [
-    { name: "JavaScript", level: 95, color: "#00ffff" },
-    { name: "TypeScript", level: 90, color: "#ff00ff" },
-    { name: "Node.js", level: 95, color: "#00ffff" },
-    { name: "Discord.js", level: 95, color: "#ff00ff" },
-    { name: "React", level: 80, color: "#00ffff" },
-    { name: "Next.js", level: 80, color: "#ff00ff" },
-    { name: "API Dev", level: 85, color: "#00ffff" },
-    { name: "AI Integration", level: 90, color: "#ff00ff" },
+    { name: "HTML/CSS", level: 90, color: "#00ffff" },
+    { name: "JavaScript", level: 85, color: "#ff00ff" },
+    { name: "React.js", level: 80, color: "#00ffff" },
+    { name: "Next.js", level: 75, color: "#ff00ff" },
+    { name: "Node.js", level: 80, color: "#00ffff" },
+    { name: "Express.js", level: 75, color: "#ff00ff" },
+    { name: "MongoDB", level: 70, color: "#00ffff" },
+    { name: "Tailwind CSS", level: 85, color: "#ff00ff" },
   ]
 
   const handleFirstInteraction = () => {
@@ -457,16 +456,16 @@ export default function Home() {
               <div>
                 <h3 className="text-2xl font-bold mb-4">TECHNICAL PROFICIENCY</h3>
                 <p className="text-white/70 leading-relaxed mb-6">
-                  With expertise in modern JavaScript frameworks and Discord API integration, I create robust, scalable
-                  bot solutions that enhance server functionality and user experience.
+                  With expertise in MERN stack development and responsive web design, I build scalable web applications 
+                  with clean code and exceptional user experiences.
                 </p>
 
                 <div className="space-y-4">
                   {[
-                    { name: "Bot Development", value: 95 },
-                    { name: "API Integration", value: 90 },
-                    { name: "UI/UX Design", value: 80 },
-                    { name: "Database Management", value: 85 },
+                    { name: "Frontend Development", value: 90 },
+                    { name: "RESTful API Design", value: 85 },
+                    { name: "MERN Stack", value: 80 },
+                    { name: "Responsive Design", value: 85 },
                   ].map((skill) => (
                     <div key={skill.name} className="space-y-1">
                       <div className="flex justify-between text-sm">
@@ -531,7 +530,7 @@ export default function Home() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* First project card - Replace AI Chat Bot with Gemini Bot */}
+            {/* First project card - Video Tube */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -544,7 +543,7 @@ export default function Home() {
                   <div className="p-6">
                     <div className="flex justify-between items-start mb-4">
                       <div className="flex items-center justify-center w-12 h-12 border border-white/20 bg-white/5">
-                        <MessageSquare className="h-6 w-6 text-[#00ffff]" />
+                        <Video className="h-6 w-6 text-[#00ffff]" />
                       </div>
                       <motion.div
                         whileHover={{ rotate: 45 }}
@@ -556,19 +555,19 @@ export default function Home() {
                     </div>
 
                     <GlitchText
-                      text="GEMINI DISCORD BOT"
+                      text="VIDEO TUBE"
                       className="text-xl font-bold mb-3 font-mono"
                       glitchIntensity={0.1}
                       glitchColors={["#00ffff", "#ff00ff", "#ffffff"]}
                     />
 
                     <p className="text-white/60 mb-6 leading-relaxed">
-                      A powerful Discord bot leveraging Google's Gemini API for advanced natural language processing,
-                      image recognition, and multimodal interactions within Discord servers.
+                      A full-stack video sharing platform similar to YouTube with features like video uploads, user authentication, 
+                      comments, likes, and personalized recommendations.
                     </p>
 
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {["Discord.js", "Gemini API", "Node.js"].map((tag) => (
+                      {["MongoDB", "Express", "React", "Node.js", "Redux"].map((tag) => (
                         <div
                           key={tag}
                           className="px-2 py-1 text-xs font-mono border border-white/10 bg-white/5 text-white/70"
@@ -579,13 +578,15 @@ export default function Home() {
                     </div>
 
                     <div className="mt-4">
-                      <GlitchImage
-                        src="/placeholder.svg?height=300&width=500"
-                        alt="Gemini Bot Preview"
-                        width={500}
-                        height={300}
-                        className="w-full h-[150px] object-cover"
-                      />
+                      <a href="https://github.com/Suffynux/Mern-Project-Video-Tube-" target="_blank" rel="noopener noreferrer">
+                        <GlitchImage
+                          src="https://images.pexels.com/photos/5081404/pexels-photo-5081404.jpeg"
+                          alt="Video Tube Preview"
+                          width={500}
+                          height={300}
+                          className="w-full h-[150px] object-cover"
+                        />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -604,7 +605,7 @@ export default function Home() {
                   <div className="p-6">
                     <div className="flex justify-between items-start mb-4">
                       <div className="flex items-center justify-center w-12 h-12 border border-white/20 bg-white/5">
-                        <Server className="h-6 w-6 text-[#ff00ff]" />
+                        <Palette className="h-6 w-6 text-[#ff00ff]" />
                       </div>
                       <motion.div
                         whileHover={{ rotate: 45 }}
@@ -616,19 +617,19 @@ export default function Home() {
                     </div>
 
                     <GlitchText
-                      text="SERVER LOG TRACKER"
+                      text="IMAGE COLOR EXTRACTOR"
                       className="text-xl font-bold mb-3 font-mono"
                       glitchIntensity={0.1}
                       glitchColors={["#ff00ff", "#00ffff", "#ffffff"]}
                     />
 
                     <p className="text-white/60 mb-6 leading-relaxed">
-                      A comprehensive Discord bot that monitors and logs server activities, providing detailed
-                      analytics, moderation tools, and security features.
+                      A user-friendly web application that extracts and displays the dominant color palette from any uploaded image,
+                      perfect for designers and developers seeking color scheme inspiration.
                     </p>
 
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {["Discord.js", "MongoDB", "Express"].map((tag) => (
+                      {["JavaScript", "HTML5", "CSS3", "Canvas API"].map((tag) => (
                         <div
                           key={tag}
                           className="px-2 py-1 text-xs font-mono border border-white/10 bg-white/5 text-white/70"
@@ -639,13 +640,15 @@ export default function Home() {
                     </div>
 
                     <div className="mt-4">
-                      <GlitchImage
-                        src="/placeholder.svg?height=300&width=500"
-                        alt="Server Log Tracker Preview"
-                        width={500}
-                        height={300}
-                        className="w-full h-[150px] object-cover"
-                      />
+                      <a href="https://suffynux.github.io/Image-Color-Extractor/" target="_blank" rel="noopener noreferrer">
+                        <GlitchImage
+                          src="https://images.pexels.com/photos/33626195/pexels-photo-33626195.jpeg"
+                          alt="Image Color Extractor Preview"
+                          width={500}
+                          height={300}
+                          className="w-full h-[150px] object-cover"
+                        />
+                      </a>
                     </div>
                   </div>
                 </div>

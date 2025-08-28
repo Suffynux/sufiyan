@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { ArrowLeft, Code, Cpu, Gamepad2, Server, Braces, Terminal, Rocket } from "lucide-react"
+import { ArrowLeft, Code, Cpu, Terminal, Rocket, Package, Table, PenTool, Globe } from "lucide-react"
 import Link from "next/link"
 import GlitchText from "@/components/glitch-text"
 import DigitalRain from "@/components/digital-rain"
@@ -19,85 +19,85 @@ export default function JourneyPage() {
 
   const journeyData = [
     {
-      year: 20,
-      title: "The Inspiration",
+      year: 18,
+      title: "Stock Boy Beginnings",
       description:
-        "Inspired by the anime Sword Art Online, I became fascinated with the idea of creating virtual worlds. Despite not having a PC, I began researching and learning about programming concepts.",
-      icon: <Cpu className="h-6 w-6" />,
+        "Started my first job as a stock boy in retail. While organizing inventory and tracking stock levels, I became curious about how systems and data work in business environments.",
+      icon: <Package className="h-6 w-6" />,
       color: "from-blue-500 to-purple-500",
-      skills: ["Conceptual Learning", "Anime Research", "Virtual Reality Concepts"],
-    },
-    {
-      year: 16,
-      title: "First Steps",
-      description:
-        "Bought my first PC and immediately dove into coding. Started with algorithm fundamentals and Python, while also learning HTML, CSS, and JavaScript basics.",
-      icon: <Code className="h-6 w-6" />,
-      color: "from-green-500 to-blue-500",
-      skills: ["Python", "HTML", "CSS", "JavaScript", "Algorithms"],
-    },
-    {
-      year: 17,
-      title: "First Project",
-      description:
-        "Created my first practical application - a month calculator for a coffee shop that calculated monthly net income. This project taught me about real-world application development.",
-      icon: <Terminal className="h-6 w-6" />,
-      color: "from-yellow-500 to-orange-500",
-      skills: ["Application Development", "Business Logic", "UI Design"],
+      skills: ["Inventory Management", "Team Collaboration", "Organization", "Time Management"],
     },
     {
       year: 18,
-      title: "Game Development & Discord",
+      title: "Microsoft Excel Introduction",
       description:
-        "Expanded my skills into C# and Unity, creating several small games. Simultaneously discovered Discord bot development and built my first moderation tools.",
-      icon: <Gamepad2 className="h-6 w-6" />,
+        "Began learning Microsoft Excel to help improve inventory tracking at work. Discovered the power of data organization and basic formulas that could automate repetitive tasks.",
+      icon: <Table className="h-6 w-6" />,
+      color: "from-green-500 to-blue-500",
+      skills: ["Microsoft Excel", "Data Entry", "Basic Formulas", "Data Organization"],
+    },
+    {
+      year: 19,
+      title: "IT Concepts Exploration",
+      description:
+        "Started learning basic IT concepts through online resources. Became interested in how computers work and how software could solve real-world problems in business settings.",
+      icon: <Cpu className="h-6 w-6" />,
+      color: "from-yellow-500 to-orange-500",
+      skills: ["Computer Basics", "Troubleshooting", "Self-Learning", "Online Resources"],
+    },
+    {
+      year: 19,
+      title: "Graphic Design Beginnings",
+      description:
+        "Explored graphic design using tools like Canva. Created simple designs for personal projects and began understanding the importance of visual communication in digital spaces.",
+      icon: <PenTool className="h-6 w-6" />,
       color: "from-red-500 to-pink-500",
-      skills: ["C#", "Unity", "API Integration", "Bot Development", "Game Design"],
+      skills: ["Canva", "Basic Design Principles", "Visual Communication", "Digital Graphics"],
     },
     {
-      year: 20,
-      title: "Advanced Discord & Web Dev",
+      year: 19,
+      title: "Python Programming Introduction",
       description:
-        "Built a comprehensive Discord bot with moderation features and a 'One-tap' bot that created temporary voice channels. Started exploring React for web development.",
-      icon: <Server className="h-6 w-6" />,
+        "Took my first steps into programming by learning Python. Started with basic syntax and simple scripts, gradually building more complex programs and understanding programming logic.",
+      icon: <Code className="h-6 w-6" />,
       color: "from-purple-500 to-indigo-500",
-      skills: ["Discord API", "React", "Node.js", "Server Management", "UX Design"],
+      skills: ["Python", "Programming Logic", "Problem Solving", "Algorithms"],
     },
     {
       year: 20,
-      title: "Skill Enhancement",
+      title: "Web Development Foundations",
       description:
-        "Focused on upgrading my skills in both game development and web development, diving deeper into advanced concepts and frameworks.",
-      icon: <Braces className="h-6 w-6" />,
+        "Began learning HTML, CSS, and JavaScript. Built my first static websites and learned how to create responsive designs for different screen sizes.",
+      icon: <Globe className="h-6 w-6" />,
       color: "from-cyan-500 to-blue-500",
-      skills: ["Advanced React", "Game Physics", "API Development", "State Management", "3D Modeling"],
+      skills: ["HTML", "CSS", "JavaScript", "Responsive Design", "Web Basics"],
     },
     {
       year: 20,
-      title: "Continuous Learning",
+      title: "React Framework Learning",
       description:
-        "Despite being busy with work, I maintained a commitment to continuous learning, exploring new technologies and keeping up with industry trends.",
+        "Dove into React.js to build more interactive and modern web applications. Learned about component-based architecture and state management to create dynamic user interfaces.",
       icon: <Terminal className="h-6 w-6" />,
       color: "from-emerald-500 to-teal-500",
-      skills: ["Self-directed Learning", "Industry Research", "Code Reviews", "Documentation"],
+      skills: ["React", "Component Architecture", "State Management", "UI Development"],
     },
     {
       year: 20,
-      title: "Full Stack Mastery",
+      title: "Full Stack Development Journey",
       description:
-        "Achieved proficiency as a Full Stack Developer and Discord bot developer. Created my own Discord server focused on development, idea sharing, and collaborative learning.",
+        "Expanded my skills to include backend development with Node.js and Express. Built full-stack applications and learned about database integration, API development, and deployment processes.",
       icon: <Rocket className="h-6 w-6" />,
       color: "from-[#00ffff] to-[#ff00ff]",
-      skills: ["Full Stack Development", "Community Building", "Mentoring", "Project Architecture", "DevOps"],
+      skills: ["Node.js", "Express", "MongoDB", "API Design", "Full Stack Development"],
     },
   ]
 
   const futureGoals = [
-    "Ethical Hacking & Cybersecurity",
-    "Advanced AI Integration",
-    "Blockchain Development",
-    "AR/VR Experiences",
-    "Open Source Contributions",
+    "Advanced React Patterns",
+    "System Design & Architecture",
+    "Cybersecurity Specialization",
+    "Mobile App Development",
+    "MERN Stack Project Collaborations",
   ]
 
   if (!mounted) return null
@@ -329,8 +329,48 @@ export default function JourneyPage() {
           <div className="mb-4 md:mb-0">
             <GlitchText text="Suffynux" className="text-2xl font-bold" glitchIntensity={0.1} />
           </div>
-          <div className="text-white/50 text-sm font-mono">
-            © {new Date().getFullYear()} // DESIGNED & DEVELOPED BY SUFFYNUX
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <div className="flex gap-3">
+              <a
+                href="https://www.linkedin.com/in/sufiyan-ali-suffynux/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="hover:text-[#0A66C2] transition-colors"
+              >
+                <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.041 0 3.603 2.003 3.603 4.605v5.591z"/></svg>
+              </a>
+              <a
+                href="https://x.com/suffynux"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter)"
+                className="hover:text-[#1DA1F2] transition-colors"
+              >
+                <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M22.162 0h-4.326l-5.836 8.228-5.836-8.228h-4.326l8.228 11.6-8.228 12.4h4.326l5.836-8.228 5.836 8.228h4.326l-8.228-12.4z"/></svg>
+              </a>
+              <a
+                href="https://www.instagram.com/suffynux/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="hover:text-[#E1306C] transition-colors"
+              >
+                <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.974-.974 2.242-1.246 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.012-4.947.07-1.276.058-2.687.334-3.682 1.329-.995.995-1.271 2.406-1.329 3.682-.058 1.28-.07 1.688-.07 4.947s.012 3.667.07 4.947c.058 1.276.334 2.687 1.329 3.682.995.995 2.406 1.271 3.682 1.329 1.28.058 1.688.07 4.947.07s3.667-.012 4.947-.07c1.276-.058 2.687-.334 3.682-1.329.995-.995 1.271-2.406 1.329-3.682.058-1.28.07-1.688.07-4.947s-.012-3.667-.07-4.947c-.058-1.276-.334-2.687-1.329-3.682-.995-.995-2.406-1.271-3.682-1.329-1.28-.058-1.688-.07-4.947-.07zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              </a>
+              <a
+                href="https://github.com/Suffynux"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="hover:text-[#fff] transition-colors"
+              >
+                <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.304.762-1.604-2.665-.305-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+            </div>
+            <div className="text-white/50 text-sm font-mono">
+              © {new Date().getFullYear()} // DESIGNED & DEVELOPED BY SUFFYNUX
+            </div>
           </div>
         </div>
       </footer>
