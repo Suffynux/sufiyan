@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Send, User, Bot } from "lucide-react"
 import { cn } from "@/lib/utils"
-
+import { GoogleGenerativeAI } from "@google/generative-ai";
 type Message = {
   role: "user" | "assistant"
   content: string
@@ -19,6 +19,9 @@ export default function GeminiDemo() {
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
   const [autoScroll, setAutoScroll] = useState(false)
+
+  // Initialize Google Generative AI
+  const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 
   // Predefined responses for the demo
   const demoResponses: Record<string, string> = {
@@ -61,36 +64,68 @@ export default function GeminiDemo() {
   }
 
   // Handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!input.trim()) return
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault()
+  //   if (!input.trim()) return
 
-    // Add user message
-    setMessages((prev) => [...prev, { role: "user", content: input.trim() }])
+  //   // Add user message
+  //   setMessages((prev) => [...prev, { role: "user", content: input.trim() }])
 
-    // Prepare for AI response
-    setTimeout(() => {
-      setMessages((prev) => [...prev, { role: "assistant", content: "" }])
+  //   // Prepare for AI response
+  //   setTimeout(() => {
+  //     setMessages((prev) => [...prev, { role: "assistant", content: "" }])
 
-      // Get appropriate response
-      const lowercaseInput = input.toLowerCase()
-      let responseText = demoResponses.default
+  //     // 
+  //     try {
+        
+  //     } catch (error) {
+        
+  //     }
+  //     // Get appropriate response
+  //     const lowercaseInput = input.toLowerCase()
+  //     let responseText = demoResponses.default
 
-      // Check for matching keywords
-      for (const [key, response] of Object.entries(demoResponses)) {
-        if (lowercaseInput.includes(key)) {
-          responseText = response
-          break
-        }
-      }
+  //     // Check for matching keywords
+  //     for (const [key, response] of Object.entries(demoResponses)) {
+  //       if (lowercaseInput.includes(key)) {
+  //         responseText = response
+  //         break
+  //       }
+  //     }
 
-      // Simulate typing
-      simulateTyping(responseText)
-    }, 500)
+  //     // Simulate typing
+  //     simulateTyping(responseText)
+  //   }, 500)
 
-    setInput("")
-    setAutoScroll(true)
+  //   setInput("")
+  //   setAutoScroll(true)
+  // }
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  if (!input.trim()) return;
+
+  setMessages((prev) => [
+    ...prev,
+    { role: "user", content: input.trim() },
+    { role: "assistant", content: "" },
+  ]);
+
+  setIsTyping(true);
+  setInput("");
+
+  try {
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const result = await model.generateContent(input);
+    const responseText = result.response.text();
+
+    simulateTyping(responseText);
+  } catch (error) {
+    console.error("Gemini API Error:", error);
+    simulateTyping("⚠️ Sorry, Gemini API failed. Try again.");
   }
+};
+
+
 
   // Auto-scroll to bottom when messages change
   useEffect(() => {
