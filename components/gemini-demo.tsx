@@ -333,7 +333,8 @@ export default function GeminiDemo() {
   const [autoScroll, setAutoScroll] = useState(false)
 
   // Initialize Gemini with API key
-  const apiKey = process.env.NEXT_PUBLIC_API_KEY
+
+  const apiKey = process.env.NEXT_PUBLIC_API_KEY || "AIzaSyCvlWoB9sbBWbehbrIBOFks5XE0kHdqAZ0"
   if (!apiKey) {
     throw new Error("❌ NEXT_PUBLIC_API_KEY is missing. Add it to .env.local")
   }
